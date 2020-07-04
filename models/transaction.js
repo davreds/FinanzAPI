@@ -23,7 +23,7 @@ const transactionSchema = new mongoose.Schema({
         type: String,
         enum: ['Payroll', 'Services Payment', 'Unforseen Expenses',
                 'Suscriptions', 'Food', 'Entertainment', 'Loan', 'Eating Out', 
-                'Luxuries', 'Clothing', 'Cravings'],
+                'Luxuries', 'Clothing', 'Cravings', 'Professional Growth'],
         required: true
     },
     type: {
