@@ -10,15 +10,26 @@ const transactionSchema = new mongoose.Schema({
         ref: 'Account',
         required: true
     },
-    balance: {
-        type: Float,
+    amount: {
+        type: Number,
         default: 0,
         min: 0
     },
     concept: {
         type: String,
-        required: true,
         default: ''
+    },
+    category: {
+        type: String,
+        enum: ['Payroll', 'Services Payment', 'Unforseen Expenses',
+                'Suscriptions', 'Food', 'Entertainment', 'Loan', 'Eating Out', 
+                'Luxuries', 'Clothing', 'Cravings'],
+        required: true
+    },
+    type: {
+        type: String,
+        enum: ['Debit', 'Credit'],
+        default: 'Credit'
     }
 })
 

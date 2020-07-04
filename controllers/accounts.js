@@ -4,7 +4,7 @@ const getAccounts = function (req, res) {
     Account.find().then(function (accounts) {
         return res.send(accounts)
     }).catch(function (error) {
-        return res.status(500).send({ error: 'Error connecting to the server.' })
+        return res.status(500).send({ error: error })
     })
 }
 
